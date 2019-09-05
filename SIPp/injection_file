@@ -1,0 +1,3 @@
+SEQUENTIAL
+# user, domain, authentication, TVT
+1200;default;[authentication username=1200 password=1200];eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.UV1H9MXal0TuK9Tc6Fo2lYjblr-jJArL30b7dEEQR4E
