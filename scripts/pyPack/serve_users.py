@@ -8,27 +8,31 @@ def xml_fetch( param1, param2 ):
         tvt = params_dict["X-TVT"]
         domain = params_dict["domain"].strip()
         user = params_dict["user"].strip()
-        password = user
-        vm_password = password
-     
-        consoleLog( "info", "===> User: %s \n" % user )
-        consoleLog( "info", "     Domain: %s \n" % domain )
-        consoleLog( "info", "     TVT: %s \n" % tvt )
+        action = params_dict["action"].strip() 
 
-        xml = """ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                        <document type="freeswitch/xml">
-                            <section name="directory">
-                                <domain name="%s">
-                                    <user id="%s">
-	                                <params>
-	                                    <param name="password" value="%s"/>
-	                                    <param name="vm-password" value="%s"/>
-	                                </params>
-                                    </user>
-                                </domain>
-                            </section>
-                    </document> """ % (domain, user, password, vm_password)
-        return xml
+        if action == "sip_auth":
+            consoleLog( "info", "===> Action: %s \n" % action )    
+            consoleLog( "info", "===> User: %s \n" % user )
+            consoleLog( "info", "     Domain: %s \n" % domain )
+            consoleLog( "info", "     TVT: %s \n" % tvt )
+
+            xml = """ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                            <document type="freeswitch/xml">
+                                <section name="directory">
+                                    <domain name="%s">
+                                        <user id="%s">
+	                                    <params>
+	                                        <param name="password" value=""/>
+	                                        <param name="vm-password" value=""/>
+	                                    </params>
+                                        </user>
+                                    </domain>
+                              </section>
+                     </document> """ % (domain, user)
+            return xml
+        else:
+            return """ """
+
     except:
         return """ """
 
