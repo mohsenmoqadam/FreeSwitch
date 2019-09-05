@@ -12,7 +12,7 @@ def xml_fetch( param1, param2 ):
 
         if action == "sip_auth":
             consoleLog( "info", "===> Action: %s \n" % action )    
-            consoleLog( "info", "===> User: %s \n" % user )
+            consoleLog( "info", "     User: %s \n" % user )
             consoleLog( "info", "     Domain: %s \n" % domain )
             consoleLog( "info", "     TVT: %s \n" % tvt )
 

@@ -1,7 +1,7 @@
 <configuration name="lua.conf" description="LUA Configuration">
   <settings>
-    <param name="xml-handler-script" value="serve_users.lua"/>
-    <param name="xml-handler-bindings" value="directory"/>
+    <!-- <param name="xml-handler-script" value="serve_users.lua"/>
+	 <param name="xml-handler-bindings" value="directory"/>-->
     <!-- 
     Specify local directories that will be searched for LUA modules
     These entries will be pre-pended to the LUA_CPATH environment variable
